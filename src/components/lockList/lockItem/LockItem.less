@@ -1,0 +1,52 @@
+@import '~_styleVariables';
+
+@color-light-primary: lighten(@color-primary, 15%);
+
+.lock-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  border-bottom: dashed 0.5px @color-grey;
+}
+
+.lock-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: solid 1px @color-light-primary;
+  background-image: url('data:image/svg+xml, <svg viewBox="-8 -3 35 35" xmlns="http://www.w3.org/2000/svg"><path fill="@{color-light-primary}" stroke="@{color-light-primary}" d="M5 12h8v-3c0-2.203-1.797-4-4-4s-4 1.797-4 4v3zM18 13.5v9c0 0.828-0.672 1.5-1.5 1.5h-15c-0.828 0-1.5-0.672-1.5-1.5v-9c0-0.828 0.672-1.5 1.5-1.5h0.5v-3c0-3.844 3.156-7 7-7s7 3.156 7 7v3h0.5c0.828 0 1.5 0.672 1.5 1.5z" /></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: border-color 1s, background-image-color 1s;
+
+  &:hover {
+    background-color: lighten(@color-primary, 70%);
+    border-color: @color-primary;
+    background-image: url('data:image/svg+xml, <svg viewBox="-8 -3 35 35" xmlns="http://www.w3.org/2000/svg"><path fill="@{color-primary}" stroke="@{color-primary}" d="M16.5 12c0.828 0 1.5 0.672 1.5 1.5v9c0 0.828-0.672 1.5-1.5 1.5h-15c-0.828 0-1.5-0.672-1.5-1.5v-9c0-0.828 0.672-1.5 1.5-1.5h0.5v-5c0-3.859 3.141-7 7-7s7 3.141 7 7c0 0.547-0.453 1-1 1h-1c-0.547 0-1-0.453-1-1 0-2.203-1.797-4-4-4s-4 1.797-4 4v5h11.5z" /></svg>');
+  }
+
+  &.success {
+    background-color: lighten(@color-success, 70%);
+    border-color: @color-success;
+    background-image: url('data:image/svg+xml, <svg viewBox="-8 -3 35 35" xmlns="http://www.w3.org/2000/svg"><path fill="@{color-success}" stroke="@{color-success}" d="M16.5 12c0.828 0 1.5 0.672 1.5 1.5v9c0 0.828-0.672 1.5-1.5 1.5h-15c-0.828 0-1.5-0.672-1.5-1.5v-9c0-0.828 0.672-1.5 1.5-1.5h0.5v-5c0-3.859 3.141-7 7-7s7 3.141 7 7c0 0.547-0.453 1-1 1h-1c-0.547 0-1-0.453-1-1 0-2.203-1.797-4-4-4s-4 1.797-4 4v5h11.5z" /></svg>');
+  }
+
+  &.error {
+    background-color: lighten(@color-error, 70%);
+    border-color: @color-error;
+    background-image: url('data:image/svg+xml, <svg viewBox="-8 -3 35 35" xmlns="http://www.w3.org/2000/svg"><path fill="@{color-error}" stroke="@{color-error}" d="M5 12h8v-3c0-2.203-1.797-4-4-4s-4 1.797-4 4v3zM18 13.5v9c0 0.828-0.672 1.5-1.5 1.5h-15c-0.828 0-1.5-0.672-1.5-1.5v-9c0-0.828 0.672-1.5 1.5-1.5h0.5v-3c0-3.844 3.156-7 7-7s7 3.156 7 7v3h0.5c0.828 0 1.5 0.672 1.5 1.5z" /></svg>');
+  }
+}
+
+.unlock-container {
+  display: flex;
+}
+
+.unlock-error {
+  display: inline;
+  color: @color-error;
+  padding-right: 10px;
+}

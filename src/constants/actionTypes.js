@@ -1,0 +1,8 @@
+export const LOCKS_REQUEST = 'LOCKS_REQUEST'
+export const LOCKS_RECEIVE = 'LOCKS_RECEIVE'
+export const LOCKS_ERROR = 'LOCKS_ERROR'
+
+export const UNLOCK_REQUEST = 'UNLOCK_REQUEST'
+export const UNLOCK_SUCCESS = 'UNLOCK_SUCCESS'
+export const UNLOCK_ERROR = 'UNLOCK_ERROR'
+export const UNLOCK_RESET = 'UNLOCK_RESET'
